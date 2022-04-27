@@ -7,19 +7,25 @@ export const Container = styled.div`
     align-items: center;
     margin: 30px 100px 30px 100px;
     color: #fff;
+
+    img {
+        cursor: pointer;
+    }
 `;
 
 export const InfoLeft = styled.div`
     display: flex;
     align-items: center;
     span {
-       margin-left: 30px; 
+       margin-left: 30px;
+       cursor: pointer;
     }
 `;
 
 export const InfoRight = styled.div`
     span {
         margin-right: 30px;
+        cursor: pointer;
     }
     button {
         width: 189px;
@@ -29,5 +35,6 @@ export const InfoRight = styled.div`
         border-radius: 5px;
         border: none;
         font-weight: bold;
+        cursor: pointer;
     }
 `;
