@@ -7,7 +7,6 @@ export const Container = styled.div`
     align-items: center;
     margin: 30px 100px 30px 100px;
     color: #fff;
-
 `;
 
 export const InfoLeft = styled.div`
