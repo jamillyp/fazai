@@ -5,11 +5,20 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 100px 30px 100px;
+    margin: 30px 50px 30px 50px;
     color: #fff;
 
     img {
         cursor: pointer;
+    }
+
+    @media (max-width: 1140px) {
+        font-size : 14px;
+    }
+    @media (max-width: 900px) {
+        span, button {
+            display: none;
+        }
     }
 `;
 
@@ -20,6 +29,12 @@ export const InfoLeft = styled.div`
        margin-left: 30px;
        cursor: pointer;
     }
+
+    @media (max-width: 1050px) {
+        span {
+            margin-left: 15px;
+        }
+    }
 `;
 
 export const InfoRight = styled.div`
@@ -27,6 +42,13 @@ export const InfoRight = styled.div`
         margin-right: 30px;
         cursor: pointer;
     }
+
+    @media (max-width: 1050px) {
+        span {
+            margin-right: 15px;
+        }
+    }
+
     button {
         width: 189px;
         height: 49px;
@@ -43,4 +65,30 @@ export const InfoRight = styled.div`
             filter: brightness(0.8);
         }
     }
+    
 `;
+
+export const MenuToggle = styled.div`
+    display: none;
+    margin-left: 70%;
+
+    @media (max-width: 900px) {
+
+        .one, .two, .three {
+
+            background-color: #fff;
+            height: 5px;
+            width: 50px;
+            margin: 6px auto;
+            /* align-self: center;
+            justify-self: right; */
+
+        }
+    }
+
+    @media (max-width: 900px) {
+        display: block;
+    }
+        
+`;
+
