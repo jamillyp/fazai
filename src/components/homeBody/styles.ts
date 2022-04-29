@@ -32,6 +32,12 @@ export const RegisterButton = styled.button`
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
 `;
 
 export const SearchButton = styled.button`
@@ -43,4 +49,10 @@ export const SearchButton = styled.button`
     border-radius: 5px;
     color: #fff;
     font-size: 18px;
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
 `;

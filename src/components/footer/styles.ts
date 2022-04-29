@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 165px;
+    height: 170px;
     left: 0px;
-    top: 847px;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    /* top: 847px; */
     background: #F5F5F5;
     display: flex;
     flex-direction: row;

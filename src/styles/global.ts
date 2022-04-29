@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        
     }
 
     html {
@@ -64,14 +65,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         justify-content: center;
     }
-    .react-modal-content{
-        width: 100%;
-        max-width: 576px;
-        background: var(--background);
-        padding: 3rem;
-        position: relative;
-        border-radius: 0.24rem;
-    }
+   
     .react-modal-close{
         position: absolute;
         right: 1.5rem;

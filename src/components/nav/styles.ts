@@ -36,5 +36,11 @@ export const InfoRight = styled.div`
         border: none;
         font-weight: bold;
         cursor: pointer;
+
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
     }
 `;
