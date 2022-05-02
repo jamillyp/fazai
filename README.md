@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Faz Aí
+<!-- [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE)  -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sobre o projeto
 
-## Available Scripts
+Se você é um estudante de Tecnologia da Informação ou uma empresa que busca por profissionais nessa área, conheça o Faz Aí. 
 
-In the project directory, you can run:
+É uma aplicação destinada à estudantes de Tecnologia da Informação e empresas, onde os estudantes podem buscar por serviços, ofertados por empresas parceiras, afim de adquirir experiências práticas, as empresas por outro lado terão acesso a um catálogo de portfólios de profissionais qualificados e cheios de vontade de aprender da melhor forma, colocando em prática!
 
-### `yarn start`
+*Bônus: O Faz Aí foi uma solução idealizada na displina de projeto integrado do curso de Design Digital, da Universidade Federal do Ceará, e usada como meu Trabalho de Conclusão de Curso.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Layout web
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Link para o Figma: https://www.figma.com/file/CWfVy2bunS3x9QX9Sijatc/Faz-A%C3%AD?node-id=0%3A1
 
-### `yarn test`
+### Telas iniciais
+![Web 1](https://github.com/jamillyp/assets/blob/main/Empresa.svg)
+![Web 2](https://github.com/jamillyp/assets/blob/main/Estudante.svg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Portfólio de estudantes
+![Web 3](https://github.com/jamillyp/assets/blob/main/Portf%C3%B3lio%20de%20estudantes.svg)
 
-### `yarn build`
+### Chat
+![Web 4](https://github.com/jamillyp/assets/blob/main/Chat.svg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Tecnologias utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Front end
+- HTML
+- CSS
+- JS
+- TypeScript
+- ReactJS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Como executar o projeto
 
-### `yarn eject`
+## Front end web
+Pré-requisitos: npm || yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# clonar repositório
+git clone https://github.com/jamillyp/fazai.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# instalar dependências
+yarn install || yarn
+ou
+npm install || npm i
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# executar o projeto
+yarn start
+ou
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Autora
 
-## Learn More
+Jamilly Pinheiro
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://www.linkedin.com/in/jamillypl/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
