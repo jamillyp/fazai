@@ -8,7 +8,6 @@ export const SlideShow = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around ;
-    margin-top: 130px;
 `;
 
 export const ContentSlide = styled.div`
