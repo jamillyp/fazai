@@ -6,17 +6,23 @@ import { Container, LoginForm, Content } from './styles';
 
 export function Login() {
 
-    const [dataLogin, setDataLogin] = useState('');
+    const [senha, setSenha] = useState('');
+    const [email, setEmail] = useState('');
 
     function handleSubmitLogin(event: FormEvent){
         event.preventDefault();
+
+        console.log(email, senha);
+        
+        setSenha('');
+        setEmail('');
     }
 
     return (
         <>
             <Nav />
             <Container>
-                <Content>
+                
                     <LoginForm onSubmit={handleSubmitLogin}>
                       
                             <h3>Login</h3>
@@ -24,22 +30,25 @@ export function Login() {
                             <input 
                                 placeholder='email'
                                 type='email'
-                                onChange={event => setDataLogin(event.target.value)}
+                                name='email'
+                                value={email}
+                                onChange={event => setEmail(event.target.value)}
                             />
 
                             
                             <input 
                                 placeholder='senha' 
                                 type='password'
-                                onChange={event => setDataLogin(event.target.value)} 
+                                name='senha'
+                                value={senha}
+                                onChange={event => setSenha(event.target.value)} 
                             />
 
                             <p>Esqueceu sua senha?</p>
 
-                            <button type="submit" >Entrar</button>
+                            <button type="submit">Entrar</button>
                       
                     </LoginForm>
-                </Content>
             </Container>
             <Footer />
         </>
