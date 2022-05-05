@@ -80,9 +80,6 @@ export const MenuToggle = styled.div`
             height: 5px;
             width: 50px;
             margin: 6px auto;
-            /* align-self: center;
-            justify-self: right; */
-
         }
     }
 

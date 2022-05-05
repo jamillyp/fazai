@@ -16,7 +16,11 @@ import {
     ContentSlide,
 } from './styles';
 
+import { useNavigate } from 'react-router-dom';
+
 export function HomeBody() {
+    const navigate = useNavigate();
+
     return (
         <Container>
             <Swiper
@@ -34,7 +38,7 @@ export function HomeBody() {
                             oportunidade<br /> 
                             para se <br />
                             desenvolver!</h3>
-                            <RegisterButton>
+                            <RegisterButton onClick={() => navigate('/register')}>
                                 Cadastre-se
                             </RegisterButton>
                             <br />
@@ -57,7 +61,7 @@ export function HomeBody() {
                             profissional<br /> 
                             para seus<br />
                             projetos!</h3>
-                            <RegisterButton>
+                            <RegisterButton onClick={() => navigate('/register')}>
                                 Cadastre-se
                             </RegisterButton>
                             <br />
