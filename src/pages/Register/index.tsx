@@ -1,12 +1,16 @@
 import { FormEvent, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Nav } from '../../components/nav';
+import { useNavigate } from 'react-router-dom';
+import { Footer } from '../../components/Footer';
+import { Nav } from '../../components/Nav';
+
 import { Container, FormRegister } from './styles';
 
 export function Register() {
     const [nome, setNome] = useState('');
     const [senha, setSenha] = useState('');
     const [email, setEmail] = useState('');
+
+    const navigate = useNavigate();
 
     function handleSubmitRegister(event: FormEvent) {
         event.preventDefault();
@@ -22,7 +26,8 @@ export function Register() {
             <Nav />
             <Container>
                 <FormRegister onSubmit={handleSubmitRegister}>
-                    <h3>Cadastre-se<br />no Faz Aí</h3>
+                    <h3>Cadastre-se</h3>
+                    <h3>no Faz Aí</h3>
 
                     <input
                         placeholder='nome'
@@ -48,7 +53,7 @@ export function Register() {
                         onChange={event => setSenha(event.target.value)}
                     />
             
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" onClick={()=>navigate('/student-register')}>Cadastrar</button>
                 </FormRegister>
             </Container>
             <Footer />

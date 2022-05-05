@@ -2,9 +2,11 @@ import React from "react";
 
 import { Route, BrowserRouter, Routes as Switch } from "react-router-dom";
 
-import { Home } from "./pages/home";
+import { StudentRegister } from "./components/StudentRegister";
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+
 
 const Routes = () => {
     return (
@@ -13,6 +15,7 @@ const Routes = () => {
                 <Route element={<Home />} path="/" />
                 <Route element={<Login />} path='/login' />
                 <Route element={<Register />} path='/register' />
+                <Route element={<StudentRegister />} path='/student-register' />
             </Switch>
         </BrowserRouter>
     );

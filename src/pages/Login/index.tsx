@@ -1,8 +1,8 @@
 import { FormEvent, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Nav } from '../../components/nav';
+import { Footer } from '../../components/Footer';
+import { Nav } from '../../components/Nav';
 
-import { Container, LoginForm, Content } from './styles';
+import { Container, LoginForm } from './styles';
 
 export function Login() {
 
