@@ -17,17 +17,17 @@ export function Nav() {
             <InfoLeft>
                 <img src={logo} alt='fazai' onClick={() => navigate('/')} />
 
-                <span>Portfólio de estudantes</span>
-                <span>Empresas parceiras</span>
+                <span onClick={() => navigate('/portfolio')}>Portfólio de estudantes</span>
+                <span >Empresas parceiras</span>
             </InfoLeft>
-            
+
             <MenuToggle>
                 <div className='one'></div>
                 <div className='two'></div>
                 <div className='three'></div>
             </MenuToggle>
-           
-            
+
+
             <InfoRight>
                 <span onClick={() => navigate('/register')}>Cadastre-se</span>
                 <span onClick={() => navigate('/login')}>Entrar</span>
