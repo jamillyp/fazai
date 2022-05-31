@@ -13,6 +13,14 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
 
         --shape: #FFFFFF;
+
+        accent-color: #D9EC05;
+
+        ::selection {
+            background-color: #F1F7B0;
+        }
+
+        
     }
 
     * {
