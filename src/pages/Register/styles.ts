@@ -7,8 +7,8 @@ export const Container = styled.div`
 `;
 
 export const FormRegister = styled.form`
-    width: 312px;
-    height: 447px;
+    width: 310px;
+    height: 430px;
     background: #FFFFFF;
     border-radius: 10px;
     display: flex;
@@ -17,7 +17,7 @@ export const FormRegister = styled.form`
     align-items: center;
 
     input {
-        margin-top: 30px;
+        margin-top: 20px;
         background: transparent;
         width: 250px;
         height: 40px;
@@ -54,5 +54,7 @@ export const FormRegister = styled.form`
     p {
         color: #D9EC05;
         font-size: 12px;
+        margin-top: 5px;
+        cursor: pointer;
     }
 `;

@@ -54,6 +54,7 @@ export function Register() {
                     />
             
                     <button type="submit" onClick={()=>navigate('/student-register')}>Cadastrar</button>
+                    <p> Já tem cadastro? <strong>Clique aqui</strong></p>
                 </FormRegister>
             </Container>
             <Footer />
