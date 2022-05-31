@@ -1,9 +1,13 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../../components/Footer';
+// import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 
-import { Container, FormRegister } from './styles';
+import { 
+    Container, 
+    FormRegister,
+    Content
+} from './styles';
 
 export function Register() {
     const [nome, setNome] = useState('');
@@ -25,39 +29,42 @@ export function Register() {
         <>
             <Nav />
             <Container>
-                <FormRegister onSubmit={handleSubmitRegister}>
-                    <h3>Cadastre-se</h3>
-                    <h3>no Faz Aí</h3>
+                <Content>
+                    <FormRegister onSubmit={handleSubmitRegister}>
+                        <h3>Cadastre-se</h3>
+                        <h3>no Faz Aí</h3>
 
-                    <input
-                        placeholder='nome'
-                        type='text'
-                        name='nome'
-                        value={nome}
-                        onChange={event => setNome(event.target.value)}
-                    />
+                        <input
+                            placeholder='nome'
+                            type='text'
+                            name='nome'
+                            value={nome}
+                            onChange={event => setNome(event.target.value)}
+                        />
 
-                    <input
-                        placeholder='email'
-                        type='email'
-                        name='email'
-                        value={email}
-                        onChange={event => setEmail(event.target.value)}
-                    />
+                        <input
+                            placeholder='email'
+                            type='email'
+                            name='email'
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
+                        />
 
-                    <input
-                        placeholder='senha'
-                        type='password'
-                        name='senha'
-                        value={senha}
-                        onChange={event => setSenha(event.target.value)}
-                    />
-            
-                    <button type="submit" onClick={()=>navigate('/student-register')}>Cadastrar</button>
-                    <p> Já tem cadastro? <strong>Clique aqui</strong></p>
-                </FormRegister>
+                        <input
+                            placeholder='senha'
+                            type='password'
+                            name='senha'
+                            value={senha}
+                            onChange={event => setSenha(event.target.value)}
+                        />
+
+                        <button type="submit" onClick={() => navigate('/student-register')}>Cadastrar</button>
+                        <p> Já tem cadastro? <strong>Clique aqui</strong></p>
+                    </FormRegister>
+                </Content>
+
             </Container>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

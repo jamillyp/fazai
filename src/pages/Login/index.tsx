@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { Footer } from '../../components/Footer';
+// import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 
 import { Container, LoginForm } from './styles';
@@ -50,7 +50,7 @@ export function Login() {
                       
                     </LoginForm>
             </Container>
-            <Footer />
+            {/* <Footer /> */}
         </>
 
     );

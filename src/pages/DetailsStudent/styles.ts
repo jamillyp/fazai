@@ -10,8 +10,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     width: 80%;
-    height: 642px;
-    padding: 10px;
+    height: 100%;
+    /* padding: 20px; */
     background: rgba(194, 182, 226, 0.42);
     border-radius: 10px;
     display: flex;
@@ -21,35 +21,52 @@ export const Content = styled.div`
 `;
 
 export const InfoStudent = styled.div`
-    width: 291px;
+    width: 290px;
     height: 608px;
     background: #FFFFFF;
     border-radius: 10px;
     color: #928CA2;
-    font-size: 16px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    align-items: center;
 
-    justify-content: space-between;
+    padding: 10px;
 
-    p, span {
-        margin-left: 8px;
+    justify-content: space-evenly;
+    
+    p {
+        font-size: small;
     }
+`;
 
-    #teste {
-        margin-left: 8px;
-    }
+export const StudentAbout = styled.div`
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    line-height: 23px;
+`;
+
+export const StudentTasks = styled.div`
+    margin: 0px 10px 10px 10px;
+    text-align: center;
 
     #habilidades {
-        width: 40%;
-        height: 23px;
-        margin-left: 5px;
+        width: 110px;
+        height: 28px;
         background: #8E66FF;
         border-radius: 10px;
         border: none;
         color: #D9EC05;
+        margin: 1px;
+        cursor: default;
+        padding: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
+    
 `;
 
 export const WorkStudent = styled.div`
@@ -57,6 +74,7 @@ export const WorkStudent = styled.div`
     height: 608px;
     background: #FFFFFF;
     border-radius: 10px;
+    margin: 20px 20px 20px 0px;
 `;
 
 export const ContentWork = styled.div`

@@ -1,4 +1,4 @@
-import { Footer } from "../../components/Footer";
+// import { Footer } from "../../components/Footer";
 import { HomeBody } from "../../components/HomeBody";
 import { Nav } from "../../components/Nav";
 
@@ -9,7 +9,7 @@ export function Home() {
         <Container>
             <Nav />
             <HomeBody />
-            <Footer />
+            {/* <Footer /> */}
         </Container>
     );
 }

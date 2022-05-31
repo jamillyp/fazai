@@ -17,8 +17,8 @@ export function Nav() {
             <InfoLeft>
                 <img src={logo} alt='fazai' onClick={() => navigate('/')} />
 
-                <span onClick={() => navigate('/portfolio')}>Portfólio de estudantes</span>
-                <span >Empresas parceiras</span>
+                <button onClick={() => navigate('/portfolio')}>Portfólio de estudantes</button>
+                <button>Empresas parceiras</button>
             </InfoLeft>
 
             <MenuToggle>

@@ -25,9 +25,19 @@ export const Container = styled.div`
 export const InfoLeft = styled.div`
     display: flex;
     align-items: center;
-    span {
+    
+
+    button {
        margin-left: 30px;
        cursor: pointer;
+       background: transparent;
+       border: none;
+       color: #fff;
+       font-size: 14px;
+
+       &:hover {
+           color: #F0FC66;
+       }
     }
 
     @media (max-width: 1050px) {
@@ -41,6 +51,14 @@ export const InfoRight = styled.div`
     span {
         margin-right: 30px;
         cursor: pointer;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+
+        &:hover {
+            color: #F0FC66;
+        }
     }
 
     @media (max-width: 1050px) {
