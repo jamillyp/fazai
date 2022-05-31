@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 export const Content = styled.div`
     width: 85%;
-    height: 615px;
+    height: 100%;
     background: rgba(194, 182, 226, 0.42);
     border-radius: 10px;
     display: flex;
@@ -24,8 +24,9 @@ export const Content = styled.div`
 
     #card {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        margin-bottom: 30px;
     }
     
 `;

@@ -114,7 +114,6 @@ export const StudentProfile = styled.div`
     }
     span {
         color: #776D6D;
-        /* font-weight: lighter; */
         font-size: small;
     }
     img {
