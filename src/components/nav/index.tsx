@@ -32,7 +32,7 @@ export function Nav() {
                 <span onClick={() => navigate('/register')}>Cadastre-se</span>
                 <span onClick={() => navigate('/login')}>Entrar</span>
 
-                <button>Ofertar oportunidades</button>
+                <button onClick={() => navigate('/register-offer')}>Ofertar oportunidades</button>
             </InfoRight>
 
         </Container>

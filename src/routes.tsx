@@ -8,6 +8,7 @@ import { Login } from "./pages/Login";
 import { Portfolio } from "./pages/Portfolio";
 import { Register } from "./pages/Register";
 import { RegisterCompany } from "./pages/RegisterCompany";
+import { RegisterOffer } from "./pages/RegisterOffer";
 import { RegisterStudent } from "./pages/RegisterStudent";
 
 
@@ -22,6 +23,7 @@ const Routes = () => {
                 <Route element={<RegisterCompany />} path='/company-register' />
                 <Route element={<Portfolio />} path='/portfolio' />
                 <Route element={<DetailsStudent />} path='/detalhes-estudante' />
+                <Route element={<RegisterOffer />} path='/register-offer' />
             </Switch>
         </BrowserRouter>
     );

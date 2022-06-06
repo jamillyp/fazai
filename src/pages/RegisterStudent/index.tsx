@@ -12,9 +12,9 @@ import {
 
 export function RegisterStudent() {
     const [search, setSearch] = useState(true);
-    const [ofert, setOfert] = useState(false);
+    const [offer, setOffer] = useState(false);
 
-    console.log(search, ofert);
+    console.log(search, offer);
 
     const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ export function RegisterStudent() {
                         <SubTitle>
                             <span>Você está:</span>
                             <input type='radio' onClick={handleStudentOption} onChange={event => setSearch(event.target.checked) } checked={search} /> <label>buscando oportunidade </label>
-                            <input type='radio' onClick={handleCompanyOption} onChange={event => setOfert(event.target.checked) } checked={ofert} /> <label>ofertando oportunidade </label>
+                            <input type='radio' onClick={handleCompanyOption} onChange={event => setOffer(event.target.checked) } checked={offer} /> <label>ofertando oportunidade </label>
                         </SubTitle>
 
                         <Register>

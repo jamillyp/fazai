@@ -65,7 +65,7 @@ export function HomeBody() {
                                 Cadastre-se
                             </RegisterButton>
                             <br />
-                            <SearchButton>
+                            <SearchButton onClick={() => navigate('/portfolio')}>
                                 Buscar profissionais
                             </SearchButton>
                         </ContentSlide>
