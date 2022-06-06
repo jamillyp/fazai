@@ -28,5 +28,19 @@ export const Content = styled.div`
         gap: 20px;
         margin-bottom: 30px;
     }
+
+    @media(min-width: 1470px) {
+        #card {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media(min-width: 1980px) {
+        #card {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
     
 `;

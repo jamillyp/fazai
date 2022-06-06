@@ -7,7 +7,9 @@ export const SlideShow = styled.div`
     height: 500px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around ;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
 `;
 
 export const ContentSlide = styled.div`

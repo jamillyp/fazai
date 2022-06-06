@@ -11,7 +11,7 @@ import {
 } from "./styles";
 
 export function RegisterStudent() {
-    const [search, setSearch] = useState(false);
+    const [search, setSearch] = useState(true);
     const [ofert, setOfert] = useState(false);
 
     console.log(search, ofert);
