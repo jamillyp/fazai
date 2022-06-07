@@ -42,7 +42,7 @@ export function HomeBody() {
                                 Cadastre-se
                             </RegisterButton>
                             <br />
-                            <SearchButton>
+                            <SearchButton onClick={() => navigate('/services')}>
                                 Buscar serviços
                             </SearchButton>
                         </ContentSlide>

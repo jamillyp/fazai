@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Route, BrowserRouter, Routes as Switch } from "react-router-dom";
+import { AvailableServices } from "./pages/AvailableServices";
 import { DetailsStudent } from "./pages/DetailsStudent";
 
 import { Home } from "./pages/Home";
@@ -24,6 +25,7 @@ const Routes = () => {
                 <Route element={<Portfolio />} path='/portfolio' />
                 <Route element={<DetailsStudent />} path='/detalhes-estudante' />
                 <Route element={<RegisterOffer />} path='/register-offer' />
+                <Route element={<AvailableServices />} path='/services' />
             </Switch>
         </BrowserRouter>
     );
