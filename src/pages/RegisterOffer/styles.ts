@@ -29,7 +29,7 @@ export const Title = styled.div`
     }
 `;
 
-export const Register = styled.div`
+export const Register = styled.form`
     display: flex;
     flex-direction: row;
     justify-content: space-between;

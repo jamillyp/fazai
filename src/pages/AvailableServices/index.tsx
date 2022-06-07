@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CardServices } from '../../components/CardServices';
 import { Nav } from '../../components/Nav';
+import { OfferProps } from '../RegisterOffer';
 
 import {
     BodyContent,
@@ -10,23 +11,23 @@ import {
     ServicesCard
 } from './styles';
 
-interface ServicesData {
-    dados: [
-        {
-            title: string;
-            client: string;
-            description: string;
-        }
-    ]
-}
 
 export function AvailableServices() {
-    const [data, setData] = useState<ServicesData[]>();
+
+    // const [dados, setDados] = useState<OfferProps[]>([]);
+
+    // const data = [
+    //     {
+    //         title: 'Teste título',
+    //         client: 'Teste cliente',
+    //         description: 'Tesde de descrição'
+    //     }
+    // ]
 
 
-    useEffect(() => {
-        // setData(dados);
-    }, [])
+    // useEffect(() => {
+    //     setDados(data);
+    // }, [])
 
     return (
         <>
@@ -39,7 +40,7 @@ export function AvailableServices() {
                         </Title>
 
                         <ServicesCard>
-                            <CardServices />
+                            <CardServices title="Título teste" description="Descrição breve do projeto" client="Cliente Teste" />
 
                         </ServicesCard>
                     </BodyContent>

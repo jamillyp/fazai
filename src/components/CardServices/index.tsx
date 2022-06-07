@@ -3,14 +3,20 @@ import {
     Content
 } from "./styles";
 
-export function CardServices() {
+interface CardServicesProps {
+    title: string;
+    client: string;
+    description: string;
+}
+
+export function CardServices({title, client, description}: CardServicesProps) {
     return (
         <Container>
             <Content>
-                <h3>Desenvolvimento de landing page</h3>
+                <h3>{title}</h3>
 
-                <p><strong>Cliente:</strong> Cliente Exemplo</p>
-                <p><strong>Descrição:</strong> Desenvolvimento de website</p>
+                <p><strong>Cliente:</strong> {client}</p>
+                <p><strong>Descrição:</strong> {description}</p>
 
                 <button>ver mais</button>
             </Content>

@@ -26,6 +26,7 @@ export const Content = styled.div`
         color: #776D6D;
     }
     button {
+        margin-top: 10px;
         width: 93px;
         height: 26px;
         background: #D9EC05;

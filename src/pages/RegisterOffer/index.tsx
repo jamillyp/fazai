@@ -1,15 +1,54 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { Nav } from '../../components/Nav';
 import { BodyContent, Container, Content, Register, Title } from './styles';
 
 import pdf from '../../assets/images/pdf.png';
 import pdfBefore from '../../assets/images/pdf-before.png';
 
+export interface OfferProps {
+    title: string;
+    price: string;
+    description: string;
+    image: string;
+    pdf: string;
+}
+
 export function RegisterOffer() {
 
     const [imagePreview, setImagePreview] = useState("");
     const [pdfPreview, setPdfPreview] = useState("");
     const [fileError, setFileError] = useState("");
+
+    const [title, setTitle] = useState("");
+    const [price, setPrice] = useState("");
+    const [description, setDescription] = useState("");
+
+    const [offerData, setOfferData] = useState<OfferProps[]>([]);
+
+    function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+
+        const data = [{
+            title: title,
+            price: price,
+            description: description,
+            image: imagePreview,
+            pdf: pdfPreview
+        }]
+
+        setOfferData(data);
+
+        console.log("estado: ",{offerData});
+
+
+        console.log("dados: ", data);
+
+        setTitle("");
+        setPrice("");
+        setDescription("");
+        setImagePreview("");
+        setPdfPreview("");
+    }
 
     function validateFile(file: File) {
         if (file) {
@@ -44,6 +83,9 @@ export function RegisterOffer() {
         setImagePreview("");
         setPdfPreview("");
     }
+
+
+
     return (
         <>
             <Nav />
@@ -54,14 +96,26 @@ export function RegisterOffer() {
                             <h1>Cadastro de oportunidade</h1>
                         </Title>
 
-                        <Register>
+                        <Register onSubmit={handleSubmit}>
                             <div>
                                 <div id='one'>
-                                    <input placeholder='Título da oferta' />
-                                    <input placeholder='Valor' />
+                                    <input
+                                        placeholder='Título da oferta'
+                                        value={title}
+                                        onChange={e => setTitle(e.target.value)}
+                                    />
+                                    <input
+                                        placeholder='Valor'
+                                        value={price}
+                                        onChange={e => setPrice(e.target.value)}
+                                    />
                                 </div>
                                 <div id='two'>
-                                    <textarea placeholder='breve descrição sobre a oferta...' />
+                                    <textarea
+                                        placeholder='breve descrição sobre a oferta...'
+                                        value={description}
+                                        onChange={e => setDescription(e.target.value)}
+                                    />
                                 </div></div>
 
                             <div id='three'>
@@ -73,8 +127,8 @@ export function RegisterOffer() {
                                         <label
                                             id='arquivo'
                                         >
-                                            <img style={{width: '30px', height: '30px', marginTop: '20px'}} src={pdfBefore} />
-                                            <input placeholder='solte um arquivo'
+                                            <img style={{ width: '30px', height: '30px', marginTop: '20px' }} src={pdfBefore} />
+                                            <input
                                                 type="file"
                                                 id="arquivo"
                                                 name="arquivo"
@@ -88,7 +142,7 @@ export function RegisterOffer() {
                                         </label>
 
                                 }
-                                <button>Cadastrar oferta</button>
+                                <button type='submit' onClick={handleSubmit} >Cadastrar oferta</button>
                             </div>
 
                         </Register>
