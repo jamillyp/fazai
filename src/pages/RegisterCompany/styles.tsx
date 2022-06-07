@@ -134,20 +134,52 @@ export const Register = styled.div`
         align-items: center;
         justify-content: space-between;
 
-        input {
+        label {
+            cursor: pointer;
+            text-align: center;
+            font-size: 12px;
+            color: #776D6D;
             margin-top: 20px;
             border: none;
             width: 130px;
             height: 150px;
             left: 1027px;
-
             background: rgba(73, 46, 149, 0.28);
             border-radius: 5px;
             border: none;
-
             word-wrap: break-word;
+            padding: 35px;
+        }
+        input[type="file"] {
+            display: none;
+        }
 
-            padding-left: 10px;
+        #imageFile {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            background-color: #C2B6E2;
+            border-radius: 10px;
+            width: 130px;
+            height: 150px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        img {
+            margin-bottom: 10px;
+            width: 100px;
+            height: 120px;
+        }
+        span {
+            color: red;
+            font-weight: bold;
+            margin-left: 80%;
+            cursor: pointer;
+
+            &:hover {
+            filter: brightness(0.9);
+            }
         }
 
         button {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useNavigationType } from "react-router-dom";
 import { Nav } from "../../components/Nav";
 import {
@@ -14,18 +14,54 @@ export function RegisterStudent() {
     const [search, setSearch] = useState(true);
     const [offer, setOffer] = useState(false);
 
+    const [imagePreview, setImagePreview] = useState("");
+    const [pdfPreview, setPdfPreview] = useState("");
+    const [fileError, setFileError] = useState("");
+
+
     console.log(search, offer);
 
     const navigate = useNavigate();
 
-    function handleStudentOption(){
+    function handleStudentOption() {
         navigate('/student-register')
     }
 
-    function handleCompanyOption(){
+    function handleCompanyOption() {
         navigate('/company-register')
     }
-    
+
+    function validateFile(file: File) {
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener(
+                "load",
+                function () {
+                    setImagePreview(String(reader.result));
+                },
+                false
+            );
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+
+            setPdfPreview("");
+        } else {
+            setFileError("Não foi possível carregar o arquivo");
+            return;
+        }
+    }
+
+    function clearImage() {
+        setImagePreview("");
+    }
+ 
+    useEffect(() => {
+        console.log(imagePreview);
+    }, [imagePreview])
+
 
     return (
         <>
@@ -39,22 +75,22 @@ export function RegisterStudent() {
 
                         <SubTitle>
                             <span>Você está:</span>
-                            <input type='radio' onClick={handleStudentOption} onChange={event => setSearch(event.target.checked) } checked={search} /> <label>buscando oportunidade </label>
-                            <input type='radio' onClick={handleCompanyOption} onChange={event => setOffer(event.target.checked) } checked={offer} /> <label>ofertando oportunidade </label>
+                            <input type='radio' onClick={handleStudentOption} onChange={event => setSearch(event.target.checked)} checked={search} /> <label>buscando oportunidade </label>
+                            <input type='radio' onClick={handleCompanyOption} onChange={event => setOffer(event.target.checked)} checked={offer} /> <label>ofertando oportunidade </label>
                         </SubTitle>
 
                         <Register>
                             <div id='one'>
-                                <input 
+                                <input
                                     placeholder="nome completo"
                                 />
-                                <input 
+                                <input
                                     placeholder="melhor e-mail"
                                 />
-                                <input 
+                                <input
                                     placeholder="telefone"
                                 />
-                                <input 
+                                <input
                                     placeholder="linkedIn"
                                 />
                             </div>
@@ -73,15 +109,34 @@ export function RegisterStudent() {
                                     <option>2</option>
                                 </select>
 
-                            <textarea
-                                placeholder="descreva suas habilidades"
-                            />
+                                <textarea
+                                    placeholder="descreva suas habilidades"
+                                />
                             </div>
 
                             <div id='three'>
-                                <input
-                                placeholder="arraste uma foto"
-                                />
+                                {
+                                    imagePreview ? <div id="imageFile">
+                                        <span onClick={clearImage}>x</span>
+                                        <img src={imagePreview} />
+                                    </div> :
+                                        <label
+                                            htmlFor="enviar-arquivo"
+                                        > Adicione uma imagem
+                                            <input
+                                                type="file"
+                                                name="enviar-arquivo"
+                                                accept=".jpg, .jpeg, .png"
+                                                id="enviar-arquivo"
+                                                onChange={(e) => {
+                                                    if (e.target.files?.length) {
+                                                        validateFile(e.target.files[0]);
+                                                    }
+                                                }}
+                                            />
+                                        </label>
+                                }
+
                                 <button>Finalizar cadastro</button>
                             </div>
 
