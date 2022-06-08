@@ -33,3 +33,27 @@ export const ServicesCard = styled.div`
     
 `;
 
+export const Pagination = styled.div`
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin: 5% 10px 0 10px;
+        border: none;
+        background: #BDC722;
+        color: #fff; 
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        font-weight: bold;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+
+    #continue {
+        background: #492E95;
+    }
+`;
+

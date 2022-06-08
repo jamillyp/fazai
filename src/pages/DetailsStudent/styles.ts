@@ -106,7 +106,7 @@ export const ContentWork = styled.div`
 `;
 
 export const StudentProfile = styled.div`
-    width: 291px;
+    width: 290px;
     height: 226px;
     display: flex;
     flex-direction: column;
