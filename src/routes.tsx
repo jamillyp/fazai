@@ -6,11 +6,13 @@ import { DetailsStudent } from "./pages/DetailsStudent";
 
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
+import { Negotiations } from "./pages/Negotiations";
 import { Portfolio } from "./pages/Portfolio";
 import { Register } from "./pages/Register";
 import { RegisterCompany } from "./pages/RegisterCompany";
 import { RegisterOffer } from "./pages/RegisterOffer";
 import { RegisterStudent } from "./pages/RegisterStudent";
+import { ServicesExpand } from "./pages/ServicesExpand";
 
 
 const Routes = () => {
@@ -26,6 +28,8 @@ const Routes = () => {
                 <Route element={<DetailsStudent />} path='/detalhes-estudante' />
                 <Route element={<RegisterOffer />} path='/register-offer' />
                 <Route element={<AvailableServices />} path='/services' />
+                <Route element={<ServicesExpand />} path='/services-expand' />
+                <Route element={<Negotiations />} path='/negotiation' />
             </Switch>
         </BrowserRouter>
     );

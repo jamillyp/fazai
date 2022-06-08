@@ -8,7 +8,7 @@ export const Container = styled.div`
     margin-bottom: 150px;
 `;
 export const Content = styled.div`
-    width: 85%;
+    width: 1000px;
     height: 100%;
     background: rgba(194, 182, 226, 0.42);
     border-radius: 10px;

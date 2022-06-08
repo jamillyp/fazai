@@ -9,6 +9,7 @@ export interface OfferProps {
     title: string;
     price: string;
     description: string;
+    ability: string;
     image: string;
     pdf: string;
 }
@@ -22,6 +23,7 @@ export function RegisterOffer() {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [ability, setAbility] = useState("");
 
     const [offerData, setOfferData] = useState<OfferProps[]>([]);
 
@@ -32,9 +34,10 @@ export function RegisterOffer() {
             title: title,
             price: price,
             description: description,
+            ability: ability,
             image: imagePreview,
             pdf: pdfPreview
-        }]
+        }]                    
 
         setOfferData(data);
 
@@ -111,6 +114,11 @@ export function RegisterOffer() {
                                     />
                                 </div>
                                 <div id='two'>
+                                    <input 
+                                        placeholder='habilidades desejadas do profissional'
+                                        value={ability}
+                                        onChange={e => setAbility(e.target.value)}
+                                    />
                                     <textarea
                                         placeholder='breve descrição sobre a oferta...'
                                         value={description}

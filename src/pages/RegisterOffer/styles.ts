@@ -12,9 +12,8 @@ export const Content = styled.div`
     border: none;
     border-radius: 10px;
     width: 1000px;
-    height: 450px;
+    height: 100%;
     margin: 20px;
-   
 `;
 
 export const BodyContent = styled.div`
@@ -60,7 +59,7 @@ export const Register = styled.form`
 
     #two {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 10px;
 
         textarea:focus {
@@ -79,6 +78,22 @@ export const Register = styled.form`
             padding-left: 10px;
             font-size: 12px;
         }
+
+        input {
+            margin-top: 10px;
+            background: transparent;
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #492E95;
+            padding-left: 10px;
+            font-size: 12px;
+        }
+
+        input:focus {
+        border: 2px solid #492E95;
+        outline: none;
+    }
     }
 
     #three {
@@ -95,14 +110,14 @@ export const Register = styled.form`
             color: #776D6D;
             margin-top: 20px;
             border: none;
-            width: 130px;
-            height: 150px;
+            width: 150px;
+            height: 200px;
             left: 1027px;
             background: rgba(73, 46, 149, 0.28);
             border-radius: 5px;
             border: none;
             word-wrap: break-word;
-            padding: 35px;
+            padding-top: 65px;
         }
         input[type="file"] {
             display: none;
@@ -114,8 +129,8 @@ export const Register = styled.form`
             margin-top: 20px;
             background-color: #C2B6E2;
             border-radius: 10px;
-            width: 130px;
-            height: 150px;
+            width: 150px;
+            height: 200px;
             justify-content: space-evenly;
             align-items: center;
         }
@@ -124,11 +139,13 @@ export const Register = styled.form`
             margin-bottom: 10px;
             width: 100px;
             height: 120px;
+            border-radius: 10px;
         }
         span {
             color: red;
             font-weight: bold;
-            margin-left: 80%;
+            margin-left: 65%;
+            margin-top: -5%;
             cursor: pointer;
 
             &:hover {

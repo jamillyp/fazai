@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { 
     Container,
     Content
@@ -10,6 +11,8 @@ interface CardServicesProps {
 }
 
 export function CardServices({title, client, description}: CardServicesProps) {
+    const navigate = useNavigate();
+    
     return (
         <Container>
             <Content>
@@ -18,7 +21,7 @@ export function CardServices({title, client, description}: CardServicesProps) {
                 <p><strong>Cliente:</strong> {client}</p>
                 <p><strong>Descrição:</strong> {description}</p>
 
-                <button>ver mais</button>
+                <button onClick={() => navigate('/services-expand')}>ver mais</button>
             </Content>
         </Container>
     );
