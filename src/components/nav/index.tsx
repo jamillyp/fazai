@@ -8,7 +8,12 @@ import {
 import logo from '../../assets/images/logo.svg';
 import { useNavigate } from 'react-router-dom';
 
-export function Nav() {
+interface NavProps {
+    buttonTitleOffer?: string;
+    buttonTitleSign?: string;
+    buttonTitleRegister?: string;
+}
+export function Nav({buttonTitleOffer, buttonTitleSign, buttonTitleRegister} : NavProps) {
 
     const navigate = useNavigate();
     return (
@@ -29,10 +34,15 @@ export function Nav() {
 
 
             <InfoRight>
-                <span onClick={() => navigate('/register')}>Cadastre-se</span>
-                <span onClick={() => navigate('/login')}>Entrar</span>
+                
+                <span onClick={() => navigate('/register')}>{buttonTitleRegister}</span>
+                <span onClick={() => navigate('/login')}>{buttonTitleSign}</span>
 
-                <button onClick={() => navigate('/register-offer')}>Ofertar oportunidades</button>
+                
+                {buttonTitleOffer === undefined ? <></> : 
+                 <button onClick={() => navigate('/register-offer')}>{buttonTitleOffer}</button>
+                }
+               
             </InfoRight>
 
         </Container>

@@ -7,7 +7,7 @@ import { Container } from "./styles";
 export function Home() {
     return (
         <Container>
-            <Nav />
+            <Nav buttonTitleOffer="Ofertar oportunidades" buttonTitleSign="Entrar" buttonTitleRegister="Cadastre-se" />
             <HomeBody />
             {/* <Footer /> */}
         </Container>
