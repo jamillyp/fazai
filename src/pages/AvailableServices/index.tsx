@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CardServices } from '../../components/CardServices';
 import { Nav } from '../../components/Nav';
+import { OfferProps } from '../RegisterOffer';
 
 import {
     BodyContent,
@@ -8,11 +9,41 @@ import {
     Content,
     Title,
     ServicesCard,
-    Pagination
+    Pagination,
 } from './styles';
 
-
 export function AvailableServices() {
+
+    const [data, setData] = useState<OfferProps[]>([]);
+
+    function loadData() {
+        setData([
+            {
+                title: "Título",
+                price: "10.000,00",
+                description: "Desenvolvimento de um web site.",
+                ability: "React, TypeScript",
+                image: "",
+                pdf: ""
+            },
+            {
+                title: "Título 2",
+                price: "13.000,00",
+                description: "Desenvolvimento de um app.",
+                ability: "React-Native, TypeScript",
+                image: "",
+                pdf: ""
+            },
+        ]);
+
+        console.log(data);
+        
+    }
+
+    useEffect(() => {
+        loadData();
+    }, [])
+
 
     return (
         <>
@@ -25,14 +56,16 @@ export function AvailableServices() {
                         </Title>
 
                         <ServicesCard>
-                            <CardServices title="Título teste" description="Descrição breve do projeto" client="Cliente Teste" />
-
-                            <Pagination>
-                                <button>Voltar</button>
-                                <button id='continue'>Continuar</button>
-                            </Pagination>
-
+                           
+                            <CardServices title="Título" description="Descrição breve do projeto" client="Cliente Teste" />
                         </ServicesCard>
+
+                        <Pagination>
+                            <button>Voltar</button>
+                            <button id='continue'>Continuar</button>
+                        </Pagination>
+
+
                     </BodyContent>
                 </Content>
             </Container>

@@ -6,12 +6,12 @@ import pdf from '../../assets/images/pdf.png';
 import pdfBefore from '../../assets/images/pdf-before.png';
 
 export interface OfferProps {
-    title: string;
-    price: string;
-    description: string;
-    ability: string;
-    image: string;
-    pdf: string;
+    title?: string;
+    price?: string;
+    description?: string;
+    ability?: string;
+    image?: string;
+    pdf?: string;
 }
 
 export function RegisterOffer() {
