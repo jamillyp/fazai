@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CardServices } from '../../components/CardServices';
-import { Nav } from '../../components/Nav';
+import { Nav } from '../../components/Nav2';
 import { OfferProps } from '../RegisterOffer';
 
 import {

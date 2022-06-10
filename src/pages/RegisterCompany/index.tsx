@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Nav } from "../../components/Nav";
+import { Nav } from "../../components/Nav2";
 import {
     Container,
     Content,

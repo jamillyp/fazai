@@ -1,6 +1,6 @@
 // import { Footer } from "../../components/Footer";
-import { HomeBody } from "../../components/HomeBody";
-import { Nav } from "../../components/Nav";
+import { HomeBody } from "../../components/HomeBody2";
+import { Nav } from "../../components/Nav2";
 
 import { Container } from "./styles";
 

@@ -1,5 +1,5 @@
 // import { Footer } from "../../components/Footer";
-import { Nav } from "../../components/Nav";
+import { Nav } from "../../components/Nav2";
 
 import star from '../../assets/images/star.svg';
 import avatar from '../../assets/images/avatar.svg';
