@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { Nav } from '../../components/Nav';
+import { Nav } from '../../components/Nav2';
 import { BodyContent, Container, Content, Register, Title } from './styles';
 
 import pdf from '../../assets/images/pdf.png';
