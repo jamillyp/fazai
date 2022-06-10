@@ -4,7 +4,7 @@ import { Route, BrowserRouter, Routes as Switch } from "react-router-dom";
 import { AvailableServices } from "./pages/AvailableServices";
 import { DetailsStudent } from "./pages/DetailsStudent";
 
-import { Home } from "./pages/Home2";
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Negotiations } from "./pages/Negotiations";
 import { Portfolio } from "./pages/Portfolio";

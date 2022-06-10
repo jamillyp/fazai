@@ -1,4 +1,4 @@
-import { Nav } from '../../components/Nav2';
+import { Nav } from '../../components/Nav';
 
 import {
     Container,

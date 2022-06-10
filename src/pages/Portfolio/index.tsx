@@ -1,6 +1,6 @@
 import { CardStudent } from '../../components/CardStudent';
 // import { Footer } from '../../components/Footer';
-import { Nav } from '../../components/Nav2';
+import { Nav } from '../../components/Nav';
 import { Container, Content } from './styles';
 
 export function Portfolio() {

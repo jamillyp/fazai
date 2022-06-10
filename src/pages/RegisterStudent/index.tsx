@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useNavigationType } from "react-router-dom";
-import { Nav } from "../../components/Nav2";
+import { Nav } from "../../components/Nav";
 import {
     Container,
     Content,
