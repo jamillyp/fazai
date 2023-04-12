@@ -17,9 +17,27 @@ import {
 } from './styles';
 
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export function HomeBody() {
     const navigate = useNavigate();
+    
+    // function fibonacci(n){
+       
+    //     if(n === 0) {
+    //         return 0;
+    //     } else if(n === 1) {
+    //         return 1
+    //     }
+    //     console.log(fibonacci(n -1) + fibonacci(n - 2))
+    // }
+         
+
+    // useEffect(() => {
+    //     fibonacci(5);
+    // }, [])
+
+
 
     return (
         <Container>
